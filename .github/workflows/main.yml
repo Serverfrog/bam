@@ -43,5 +43,5 @@ jobs:
           display_name: "Bam_Cataclysm_${{ github.event.release.tag_name }}"
           # changelog: "${{ steps.notes.outputs.release-notes }}"
           release_type: release
-          game_versions: "77522"
+          game_versions: "11925"
           token: ${{ secrets.CURSEFORGE_API_TOKEN }}
