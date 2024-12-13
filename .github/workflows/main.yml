@@ -24,7 +24,7 @@ jobs:
       - name: Fetch Sources
         uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.release.tag_name }}  zip-n-push:
+          ref: ${{ github.event.release.tag_name }}
       - name: Zip Folder
         run: |
           zip -r Bam_Catalcysm.zip . -x ".git/*" ".github/*"
