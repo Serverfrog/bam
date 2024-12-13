@@ -44,4 +44,4 @@ jobs:
           # changelog: "${{ steps.notes.outputs.release-notes }}"
           release_type: release
           game_versions: "77522"
-          token: ${{ secrets.CURSEFROG_API_TOKEN }}
+          token: ${{ secrets.CURSEFORGE_API_TOKEN }}
