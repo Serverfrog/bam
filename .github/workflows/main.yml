@@ -7,7 +7,7 @@ jobs:
 
   # Prepare and publish the plugin to JetBrains Marketplace repository
   release:
-    name: Publish Plugin
+    name: Publish Bam
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -30,7 +30,7 @@ jobs:
           zip -r Bam_Catalcysm.zip . -x ".git/*" ".github/*"
       - name: Generate Release Notes
         id: notes
-        uses: RedCrafter07/release-notes-action@v1
+        uses: RedCrafter07/release-notes-action
         with:
           tag-name: ${{ github.event.inputs.tag-name }}
           token: ${{ secrets.GITHUB_TOKEN }}
