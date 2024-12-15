@@ -30,7 +30,7 @@ jobs:
           mkdir Bam_Catalcysm
           rsync -av --exclude='Bam_Catalcysm' --exclude='.git'  -exclude='.github' ./ Bam_Catalcysm/
           tree .
-          zip -r Bam_Catalcysm.zip Bam_Cataclysm
+          zip -r Bam_Catalcysm.zip . -i Bam_Cataclysm
       # - name: Generate Release Notes
       #   id: notes
       #   uses: RedCrafter07/release-notes-action@v1.0.1
