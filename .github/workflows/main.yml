@@ -27,8 +27,8 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
       - name: Zip Folder
         run: |
-          mkdir Bam_Catalcysm
-          rsync -av --exclude='Bam_Catalcysm' --exclude='.git'  -exclude='.github' ./ Bam_Catalcysm/
+          mkdir Bam_Cataclysm
+          rsync -av --exclude='Bam_Cataclysm' --exclude='.git'  -exclude='.github' ./ Bam_Cataclysm/
           tree .
           zip -r Bam_Catalcysm.zip Bam_Cataclysm/
       # - name: Generate Release Notes
