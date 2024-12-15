@@ -27,7 +27,9 @@ jobs:
           ref: ${{ github.event.release.tag_name }}
       - name: Zip Folder
         run: |
-          zip -r Bam_Catalcysm.zip . -x ".git/*" ".github/*"
+          mkdir Bam_Catalcysm
+          cp -r ./* Bam_Catalcysm
+          zip -r Bam_Catalcysm.zip Bam_Cataclysm -x ".git/*" ".github/*"
       # - name: Generate Release Notes
       #   id: notes
       #   uses: RedCrafter07/release-notes-action@v1.0.1
