@@ -1,4 +1,4 @@
-name: Release
+clname: Release
 on:
   release:
     types: [prereleased, released]
@@ -28,8 +28,8 @@ jobs:
       - name: Zip Folder
         run: |
           mkdir Bam_Catalcysm
-          rsync -av --exclude='Bam_Catalcysm' ./ Bam_Catalcysm/ ./*
-          zip -r Bam_Catalcysm.zip Bam_Cataclysm -x ".git/*" ".github/*"
+          rsync -av --exclude='Bam_Catalcysm' --exclude='.git'  -exclude='.github' ./ Bam_Catalcysm/
+          zip -r Bam_Catalcysm.zip Bam_Cataclysm
       # - name: Generate Release Notes
       #   id: notes
       #   uses: RedCrafter07/release-notes-action@v1.0.1
