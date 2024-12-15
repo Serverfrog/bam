@@ -29,6 +29,7 @@ jobs:
         run: |
           mkdir Bam_Catalcysm
           rsync -av --exclude='Bam_Catalcysm' --exclude='.git'  -exclude='.github' ./ Bam_Catalcysm/
+          tree .
           zip -r Bam_Catalcysm.zip Bam_Cataclysm
       # - name: Generate Release Notes
       #   id: notes
